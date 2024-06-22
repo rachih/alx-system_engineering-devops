@@ -1,6 +1,2 @@
 #!/bin/bash
-if [ -z "$1" ]; then
-  echo "Usage: $0 <text>"
-  exit 1
-fi
-echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+[ -z "$1" ] && { echo "Usage: $0 <text>"; exit 1; } || echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
